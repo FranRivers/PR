@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{{ request.path }}" method="post">
+    <div>
+    <label>Palabra a buscar: </label>
+    <input type="text" name="palabra" placeholder="holiwi" required><br>
+    </div>
+    <p><input type = "submit" value = "Buscar"></p>
+</form>
+
+<tbody>
+    {%for results in result %}
+    <tr>
+        <td>{{ result }}</td>
+        <td>{{ x[2] }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</body>
+</html>

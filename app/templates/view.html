@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hliwi</title>
+</head>
+<body>
+<tbody>
+    {%for x in cursor %}
+    <tr>
+        <th>Palabra guna: </th>
+        <td >{{ palabra  }}</td>
+        <td class="three">{{ event.date_event }}</td>
+        {%for User in users %}
+            {%if User.event == event.id%}
+                <tr>
+                    <td>{{ palabra }}</td>
+                    <td>{{ espanol }}</td>
+                </tr>
+            {%endif%}
+        {% endfor %}
+
+    </tr>
+    {% endfor %}
+</tbody>
+</body>
+</html>
