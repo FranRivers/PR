@@ -24,7 +24,7 @@ def basica():
             con = sql.connect('C:/Users/Fran/Desktop/dic.db',check_same_thread=False)
             con.row_factory = sql.Row
             palabra = request.form['palabra']
-            cursor.execute("SELECT * FROM words WHERE guna = ?", ('%' + palabra + '%',))
+            cursor.execute("SELECT * FROM words WHERE lacra = ?", ('%' + palabra + '%',))
             return render_template('basica.html')
 
     return render_template('basica.html')
